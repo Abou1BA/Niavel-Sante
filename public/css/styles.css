@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 50%; /* Occupe la moitié de la page */
+    float: left; /* Positionne à gauche */
+    padding: 20px;
+    background-image: url('chemin/vers/votre/image.jpg'); /* Ajoutez le chemin vers votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden; /* Pour éviter que le contenu dépasse du conteneur avec un fond d'écran */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Ajout de flexbox pour aligner les sections et les boutons */
+.hospital,
+.doctor,
+.patient {
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+    justify-content: space-between; /* Espacement uniforme entre les éléments */
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
