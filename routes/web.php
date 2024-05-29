@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\MedecinController;
 use App\Http\Controllers\HopitalController;
+use App\Http\Controllers\ContactController;
 use App\Models\Hopital;
 
 Route::get('/dashboard', function () {
@@ -110,6 +111,9 @@ Route::get('/layout-static', function () {
 Route::get('/charts', function () {
     return view('charts');
 })->name('charts');
+// route message
+Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');
+
 // ROUTES charts
 
 
@@ -124,6 +128,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard_patient', [PatientController::class, 'dashboard_patient'])->name('dashboard_patient');
     Route::get('/dashboard_medecin', [MedecinController::class, 'dashboard_medecin'])->name('dashboard_medecin');
     Route::get('/dashboard_hopital', [HopitalController::class, 'dashboard_hopital'])->name('dashboard_hopital');
-
+    Route::get('/dashboard_message', [HopitalController::class, 'dashboard_message'])->name('dashboard_message');
 
 });

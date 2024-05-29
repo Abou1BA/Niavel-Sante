@@ -97,9 +97,10 @@
 		<h2 class="text-center top-space">Tarifs de Niavel_Sante</h4>
     <p>Découvrez nos différentes options d'abonnement pour profiter pleinement de Niavel_Sante :</p>
 		<ul>
-			<li><strong>Abonnement Basique :</strong> Accès aux fonctionnalités essentielles de l'application. Gratuit.</li>
-			<li><strong>Abonnement Premium :</strong> Accès complet à toutes les fonctionnalités avancées, y compris la sauvegarde automatique des données et le support prioritaire. montant/mois.</li>
-			<li><strong>Abonnement Famille :</strong> Pour partager l'accès à Niavel_Sante avec jusqu'à cinq membres de votre famille. montant/mois.</li>
+			<li><strong>Abonnement Basique :</strong> Accès aux fonctionnalités essentielles de l'application. 35 000FCFA/mois</li>
+			<li><strong>Abonnement Famille :</strong> Pour partager l'accès à Niavel_Sante avec jusqu'à cinq membres de votre famille. 85 000FCFA/mois.</li>
+			<li><strong>Abonnement Premium :</strong> Accès complet à toutes les fonctionnalités avancées, y compris la sauvegarde automatique des données et le support prioritaire. 115 000FCFA/mois.</li>
+			
 		</ul>
 			<p>Choisissez l'abonnement qui correspond le mieux à vos besoins et commencez à prendre le contrôle de votre santé dès aujourd'hui !</p>
 			<p>Vous avez des questions sur nos tarifs ou besoin d'assistance pour choisir votre abonnement ? Contactez notre équipe d'assistance pour obtenir de l'aide personnalisée.</p>
