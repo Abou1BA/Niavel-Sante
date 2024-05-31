@@ -34,7 +34,7 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-})->name('contact');
+})->name('contact')->middleware('guest');
 
 
 
@@ -85,9 +85,9 @@ Route::get('/500', function () {
 // ROUTES 500 
 
 Route::get('/login', function () {
-    return view('login');
-})->name('login')->middleware('guest');
-// ROUTES login 
+    return view('auth.login');
+})->name('login');
+
 Route::get('/register', function () {
     return view('register');
 })->name('register')->middleware('guest');
@@ -111,8 +111,7 @@ Route::get('/layout-static', function () {
 Route::get('/charts', function () {
     return view('charts');
 })->name('charts');
-// route message
-Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');
+
 
 // ROUTES charts
 
@@ -121,6 +120,7 @@ Route::post('post_inscription_patient', [PatientController::class, 'store'])->na
 Route::get('suivi', [PatientController::class, 'suivi'])->name('suivi');
 Route::post('post_inscription_medecin', [MedecinController::class, 'store'])->name('post_inscription_medecin');
 Route::post('post_inscription_hopital', [HopitalController::class, 'store'])->name('post_inscription_hopital');
+Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');
 
 
 Route::middleware('auth')->group(function () {
@@ -128,6 +128,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard_patient', [PatientController::class, 'dashboard_patient'])->name('dashboard_patient');
     Route::get('/dashboard_medecin', [MedecinController::class, 'dashboard_medecin'])->name('dashboard_medecin');
     Route::get('/dashboard_hopital', [HopitalController::class, 'dashboard_hopital'])->name('dashboard_hopital');
-    Route::get('/dashboard_message', [HopitalController::class, 'dashboard_message'])->name('dashboard_message');
+    Route::get('/dashboard_message', [ContactController::class, 'dashboard_message'])->name('dashboard_message');
 
 });

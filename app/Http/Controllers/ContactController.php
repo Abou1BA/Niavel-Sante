@@ -35,7 +35,15 @@ class ContactController extends Controller
         // Sauvegarde du contact dans la base de données
         $contact->save();
 
-        // Redirection vers la page de contact avec un message de succès
-        return redirect()->route('contact')->with('success', 'Votre message a été envoyé avec succès.');
+        // Redirection vers la page de destination avec un message de succès
+        return redirect()->route('dashboard_message')->with('success', 'Message envoyé!');
+    }
+    public function dashboard_message()
+    {
+        // Récupération de tous les messages de contact
+        $contacts = Contact::all();
+
+        // Retour de la vue 'dashboard_message' avec les données des messages
+        return view('dashboard_message', compact('contacts'));
     }
 }

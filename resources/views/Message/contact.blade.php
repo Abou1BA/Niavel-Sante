@@ -6,12 +6,14 @@
 
 <!-- container -->
 <div class="container">
+
     <ol class="breadcrumb">
         <li><a href="{{ route('index') }}">Accueil</a></li>
         <li class="active">Contact</li>
     </ol>
 
     <div class="row">
+        
         <!-- Article main content -->
         <article class="col-sm-9 maincontent">
             <header class="page-header">
@@ -27,7 +29,7 @@
             </p>
             <br>
             <form id="contactForm" action="{{ route('send.message') }}" method="POST">
-                @csrf <!-- Ajout du jeton CSRF -->
+                @csrf
                 <div class="row">
                     <div class="col-sm-4">
                         <input class="form-control" type="text" name="userName" id="userName" placeholder="Nom & Prénom" required>
@@ -83,8 +85,9 @@
             </div>
         </aside>
         <!-- /Sidebar -->
+
     </div>
-</div> <!-- /container -->
+</div>    <!-- /container -->
 
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -92,6 +95,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (!checkbox.checked) {
         event.preventDefault();
         alert('Vous devez cocher la case pour continuer.');
+        return;
     }
 });
 </script>

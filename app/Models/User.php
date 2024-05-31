@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,5 +60,9 @@ class User extends Authenticatable
     public function hopital()
     {
         return $this->hasOne(Hopital::class);
+    }
+    public function Message()
+    {
+        return $this->hasOne(Message::class);
     }
 }
